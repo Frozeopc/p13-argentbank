@@ -4,6 +4,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  height: -webkit-fill-available;
 }
 
 body {
@@ -11,11 +12,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .main {
   flex: 1;
   padding: 25px 0;
+  height: calc(100vh - 160px);
 }
 
 .bg-dark {
@@ -24,16 +27,16 @@ body {
 
 .sr-only {
   border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important; /* 1 */
+  clip: rect(1px, 1px, 1px, 1px) !important; 
   -webkit-clip-path: inset(50%) !important;
-  clip-path: inset(50%) !important; /* 2 */
+  clip-path: inset(50%) !important; 
   height: 1px !important;
   margin: -1px !important;
   overflow: hidden !important;
   padding: 0 !important;
   position: absolute !important;
   width: 1px !important;
-  white-space: nowrap !important; /* 3 */
+  white-space: nowrap !important; 
 }
 
 .main-nav {
@@ -41,6 +44,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
+  height: 50px;
 }
 
 .main-nav a {
@@ -204,16 +208,17 @@ body {
 }
 
 .footer {
+  height: 50px;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  border-top: 2px solid #ccc;
-  padding: 2rem 0 1.5rem;
-  height: max-content;
+  align-items: center;
+  text-align: center;
 }
 
 .footer-text {
-  margin: 0;
+  margin: auto;
   padding: 0;
+  
 }
 
 .account {
