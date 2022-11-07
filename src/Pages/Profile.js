@@ -28,7 +28,7 @@ export default function Profile() {
   return (    
     <>
     <Header  />
-        <main className="main bg-dark">
+        <main className="main bg-grey">
             <div className="header">              
                 <h1> Welcome back </h1>  
                 <Modal 

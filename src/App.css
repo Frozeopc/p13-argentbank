@@ -21,8 +21,8 @@ body {
   height: calc(100vh - 160px);
 }
 
-.bg-dark {
-  background-color: #12002b;
+.bg-grey {
+  background-color: lightgray;
 }
 
 .sr-only {
