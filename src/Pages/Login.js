@@ -23,7 +23,7 @@ export default function Login() {
         localStorage.clear()
     }
 
- // const [checked, setChecked] = useState(false)
+ 
     useEffect(()=> {
         
         console.log(token);
@@ -34,9 +34,7 @@ export default function Login() {
         
     }, [token, dispatch])
 
-   // const handleChecked = () => {
-     //   setChecked(!checked)
-  //  }
+ 
 
    
     return (

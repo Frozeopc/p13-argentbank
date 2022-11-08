@@ -22,13 +22,13 @@ export default function Profile() {
         else {
             dispatch(profile(token))
         }       
-        // eslint-disable-next-line
+        
     }, [])
 
   return (    
     <>
     <Header  />
-        <main className="main bg-dark">
+        <main className="main bg-grey">
             <div className="header">              
                 <h1> Welcome back </h1>  
                 <Modal 
