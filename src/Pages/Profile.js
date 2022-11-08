@@ -22,7 +22,7 @@ export default function Profile() {
         else {
             dispatch(profile(token))
         }       
-        // eslint-disable-next-line
+        
     }, [])
 
   return (    
