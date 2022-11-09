@@ -7,7 +7,7 @@ function Navbar() {
 
   const profil = useSelector((state) => (state.profil))
   const isAuth = localStorage.getItem("isAuth")
-  // revoir le is auth
+ 
   //LOCAL STORAGE que pour le site local, redux pour le partage de la page, state pour le component
   const deconnexion = () => {
     localStorage.clear();
