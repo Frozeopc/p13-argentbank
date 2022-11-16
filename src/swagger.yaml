@@ -31,7 +31,7 @@ paths:
         "200":
           description: Successfully get user's all transactions for the current month
           schema:
-            $ref: "#/definitions/Transaction"
+            $ref: "#/definitions/Transactions"
         "400":
           description: Invalid Fields
         "500":
@@ -60,8 +60,7 @@ paths:
       responses:
         "200":
           description: Successfully created a transaction!
-          schema:
-            $ref: "#/definitions/Transaction"
+            
         "400":
           description: Invalid Fields
         "500":
@@ -123,8 +122,7 @@ paths:
       responses:
         "200":
           description: Successfully delete an existent transaction!
-          schema:
-            $ref: "#/definitions/Transaction"
+          
         "400":
           description: Invalid Fields
         "500":
@@ -144,35 +142,37 @@ definitions:
       message:
         type: string
         example: Success!
-      transactions:
-        type: array
-        items:
-          type: object
-          properties:
-            id:
-              type: string
-              format: int64
-              description: User id
-              example: 20
-            date:
-              type: string
-              format: date-time
-              example: 2022-02-16T09:12:32.766Z
-            description:
-              type: string
-              example: Argent Bank notification
-            amount:
-              type: integer
-              example: 200
-            balance:
-              type: integer
-              example: 5000
-            type:
-              type: string
-              example: Electricity
-            category:
-              type: string
-              example: Household
-            notes:
-              type: string
-              example: Electricity bill for July 2022
+      transaction:
+        type: object
+        properties: 
+          id:
+            type: string
+            format: int64
+            description: User id
+            example: 20
+          date:
+            type: string
+            format: date-time
+            example: 2022-02-16T09:12:32.766Z
+          description:
+            type: string
+            example: Argent Bank notification
+          amount:
+            type: integer
+            example: 200
+          balance:
+            type: integer
+            example: 5000
+          type:
+            type: string
+            example: Electricity
+          category:
+            type: string
+            example: Household
+          notes:
+            type: string
+            example: Electricity bill for July 2022
+  Transactions:
+    type: array
+    items: 
+      $ref: '#/definitions/Transaction'
