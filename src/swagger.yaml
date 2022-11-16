@@ -36,7 +36,7 @@ paths:
           description: Invalid Fields
         "500":
           description: Internal Server Error
-  /transaction/{userId}:
+  /transaction/:
     post:
       security:
         - Bearer: []
@@ -51,11 +51,6 @@ paths:
           description: Attach Bearer JWT token
           type: string
           required: true
-        - in: path
-          name: userId
-          required: true
-          type: integer
-          description: a specific user's id
         - in: body
           name: body
           description: Created transaction object
@@ -71,7 +66,7 @@ paths:
           description: Invalid Fields
         "500":
           description: Internal Server Error
-  /transaction/{userId}/{transactionId}:
+  /transaction/{transactionId}:
     put:
       security:
         - Bearer: []
@@ -86,11 +81,6 @@ paths:
           description: Attach Bearer JWT token
           type: string
           required: true
-        - in: path
-          name: userId
-          required: true
-          type: integer
-          description: a specific user's id
         - in: path
           name: transactionId
           required: true
@@ -125,11 +115,6 @@ paths:
           description: Attach Bearer JWT token
           type: string
           required: true
-        - in: path
-          name: userId
-          required: true
-          type: integer
-          description: a specific user's id
         - in: path
           name: transactionId
           required: true
